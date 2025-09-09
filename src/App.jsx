@@ -11,6 +11,7 @@ import Navbar from './Components/Navbar.jsx'
 import {BrowserRouter, Routes,Route} from 'react-router-dom'
 import Login from './Pages/login.jsx'
 import './App.css'
+import Footer from './Components/Footer.jsx'
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]'>
@@ -22,10 +23,11 @@ const App = () => {
         <Route path='/Cart' element={<Cart/>} />
         <Route path='/Collection' element={<Collection/>} />
         <Route path='/Contact' element={<Contact/>} />
-        <Route path='/orders' element={<Orders/>} />
+        <Route path='/Orders' element={<Orders/>} />
         <Route path='/PlaceOrder' element={<PlaceOrder/>} />
         <Route path='/Product' element={<Product/>} />
       </Routes>
+      <Footer/>
     </div>
   )
 }
