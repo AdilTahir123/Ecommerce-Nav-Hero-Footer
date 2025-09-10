@@ -11,7 +11,7 @@ import assets5 from '../assets/frontend_assets/dropdown_icon.png'
 const Navbar = () => {
   const [visible,setVisible]=useState(false);
   return (
-    <div className='flex justify-between items-center py-5 font-medium '>
+    <div className='flex justify-between items-center py-4 font-medium '>
 
     <Link to='/'><img src={assets} alt="Logo" className='w-36' /></Link>
         <ul className='hidden sm:flex gap-5 text-sm text-gray-700 '>
