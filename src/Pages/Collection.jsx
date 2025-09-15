@@ -5,7 +5,7 @@ import Title from '../Components/Title';
 import ProductItems from '../Components/ProductItems';
 
 const Collection = () => {
-  const { products } = useContext(ShopContext);
+  const { products,search,showSearch } = useContext(ShopContext);
   const [showFilter, setShowFilter] = useState(false);
   const [filterProduct, setFilterProducts] = useState([]);
   const [Category, setCategory] = useState([]);
@@ -39,7 +39,9 @@ const Collection = () => {
   // Filtering + Sorting
   useEffect(() => {
     let filtered = [...products];
-
+    if(showSearch && search){
+      filtered=filtered.filter(item=>item.name.toLowerCase().includes(search.toLowerCase()));
+    }
     // Category filter
     if (Category.length > 0) {
       filtered = filtered.filter(item => Category.includes(item.category));
@@ -58,7 +60,7 @@ const Collection = () => {
     }
 
     setFilterProducts(filtered);
-  }, [Category, subCategory, sortType, products]);
+  }, [Category, subCategory, sortType, products,showSearch,search]);
 
   return (
     <div className='flex flex-col sm:flex-row gap-1 sm:gap-10 pt-10 border-t'>
@@ -100,7 +102,7 @@ const Collection = () => {
             onChange={(e) => setSortType(e.target.value)}
             className='border-2 border-gray-300 text-sm px-2'
           >
-            <option value="Relavant">Sort By: Relavent</option>
+            <option value="Relavant">Sort By: Relevant</option>
             <option value="low-high">Sort By: Low to High</option>
             <option value="high-low">Sort By: High to Low</option>
           </select>

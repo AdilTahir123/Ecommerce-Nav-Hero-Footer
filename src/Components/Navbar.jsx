@@ -7,9 +7,12 @@ import assets2 from '../assets/frontend_assets/profile_icon.png'
 import assets3 from '../assets/frontend_assets/cart_icon.png'
 import assets4 from '../assets/frontend_assets/menu_icon.png'
 import assets5 from '../assets/frontend_assets/dropdown_icon.png'
+import { useContext } from 'react'
+import { ShopContext } from '../Context/ShopContext'
 
 const Navbar = () => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
+  const {setShowSearch}=useContext(ShopContext);
 
   return (
     <div className='flex justify-between items-center py-4 font-medium'>
@@ -47,7 +50,7 @@ const Navbar = () => {
 
       {/* Right Side Icons */}
       <div className='flex items-center gap-6'>
-        <img src={assets1} alt='search' className='w-5 cursor-pointer' />
+        <img onClick={()=>setShowSearch(true)} src={assets1} alt='search' className='w-5 cursor-pointer' />
 
         {/* Profile dropdown */}
         <div className='group relative'>
