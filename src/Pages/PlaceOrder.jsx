@@ -5,10 +5,8 @@ const PlaceOrder = () => {
   const [method, setMethod] = useState("");
   const navigate = useNavigate();
 
-  // Demo product data (replace with your context/cart data)
   const handleSelect = (option) => {
     setMethod(option);
-    console.log(`${option} selected`);
     alert(`You selected ${option}`);
   };
 
@@ -19,14 +17,11 @@ const PlaceOrder = () => {
     }
 
     alert(
-      `Order placed successfully Thanks ALot For Using ${method}! Redirecting to Home...`
-    );
-    console.log(
-      `Order placed with ${method} for ${IdProduct.name} (${IdProduct.currency}${IdProduct.price})`
+      `Order placed successfully! Thanks a lot for using ${method}! The page will refresh now.`
     );
 
-    // ✅ Redirect to Home page
-    navigate("/");
+    // Refresh the page after alert
+    window.location.href = "/"; // redirects and refreshes
   };
 
   return (
@@ -34,7 +29,6 @@ const PlaceOrder = () => {
       <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center">Payment</h2>
 
-        {/* Dummy Payment Methods UI */}
         <div className="space-y-4">
           <button
             onClick={() => handleSelect("Card")}
