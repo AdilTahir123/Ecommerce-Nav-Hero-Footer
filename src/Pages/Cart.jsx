@@ -59,11 +59,12 @@ const Cart = () => {
 
           {/* Checkout Button */}
           <button
-            onClick={() => navigate("/orders")}   // ✅ navigate to Checkout page
-            className="w-full bg-green-600 text-white py-3 rounded-lg mt-6 hover:bg-green-700 transition-all"
-          >
-            Proceed to Checkout
-          </button>
+  onClick={() => navigate("/orders")}
+  className="w-full bg-green-600 border-2 hover:!bg-green-700 hover:!text-white border-green-600 text-white py-3 rounded-lg mt-6 transition-all"
+>
+  Proceed to Checkout
+</button>
+
         </div>
       )}
     </div>

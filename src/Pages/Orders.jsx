@@ -54,6 +54,7 @@ const Checkout = () => {
                 type="email"
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 placeholder="Enter your email"
+                required
               />
             </div>
             <div>
@@ -68,7 +69,7 @@ const Checkout = () => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-all"
+              className="w-full !bg-blue-600 hover:!bg-blue-700 !text-white py-3 rounded-lg transition-all"
             >
               Place Order
             </button>

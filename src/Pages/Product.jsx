@@ -109,11 +109,11 @@ const Product = () => {
           <div className="flex gap-4 mt-6">
             <button
               onClick={handleAddToCart}
-              className="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 shadow-sm transition-all"
+              className="flex-1 !bg-blue-600 !text-white py-3 px-6 rounded-lg hover:!bg-blue-700 shadow-sm transition-all"
             >
               Add to Cart
             </button>
-            <button className="flex-1 border border-gray-300 py-3 px-6 rounded-lg hover:border-blue-600 hover:text-blue-600 transition-all">
+            <button onClick={handleAddToCart} className="flex-1 border !border-gray-300 py-3 px-6 rounded-lg hover:!border-blue-600 hover:!text-blue-600 transition-all">
               Buy Now
             </button>
           </div>
