@@ -22,7 +22,6 @@
  @media(max-width: 640px) {
    a.active {
      display: block;
-     background-color:black;
-     color: white;
+     background-color: white;
    }
  }
