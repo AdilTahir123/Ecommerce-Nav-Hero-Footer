@@ -25,5 +25,7 @@
  @media(max-width: 640px) {
    a.active {
      display: block;
+     background: white;
+     
    }
  }
