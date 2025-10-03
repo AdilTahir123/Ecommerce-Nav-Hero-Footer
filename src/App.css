@@ -23,5 +23,6 @@
    a.active {
      display: block;
      background-color: white;
+     color: black;
    }
  }
