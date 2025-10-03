@@ -9,6 +9,9 @@
 }
 *{
    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 .prata-regular {
   font-family: "Prata", serif;
@@ -22,7 +25,5 @@
  @media(max-width: 640px) {
    a.active {
      display: block;
-     background-color:black;
-     color: white;
    }
  }
