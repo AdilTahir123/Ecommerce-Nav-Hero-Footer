@@ -28,9 +28,10 @@ const App = () => {
         <Route path='/contact' element={<Contact />} />
         <Route path='/orders' element={<Orders />} />
         <Route path='/place-order' element={<PlaceOrder />} />
-        <Route path='/product/:id' element={<Product />} />
+        <Route path='/product/:Id' element={<Product />} />
         {/* 404 page */}
         <Route path='*' element={<h1>Page Not Found</h1>} />
+
       </Routes>
       <Footer />
     </div>

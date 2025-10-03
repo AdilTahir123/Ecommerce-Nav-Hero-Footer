@@ -12,7 +12,7 @@ import { ShopContext } from '../Context/ShopContext'
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false);
-  const {setShowSearch}=useContext(ShopContext);
+  const { setShowSearch, getCartCount } = useContext(ShopContext);
 
   return (
     <div className='flex justify-between items-center py-4 font-medium'>
@@ -38,14 +38,6 @@ const Navbar = () => {
           <p>CONTACT</p>
           <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
         </NavLink>
-        <NavLink to='/orders' className='flex flex-col items-center gap-1'>
-          <p>ORDERS</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-        </NavLink>
-        <NavLink to='/login' className='flex flex-col items-center gap-1'>
-          <p>LOGIN</p>
-          <hr className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden' />
-        </NavLink>
       </ul>
 
       {/* Right Side Icons */}
@@ -57,11 +49,11 @@ const Navbar = () => {
           <img className='w-5 cursor-pointer' src={assets2} alt='Profile' />
           <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>
             <div className='flex flex-col gap-2 w-36 py-3 px-5 bg-slate-100 text-gray-500 rounded-lg'>
-              <p className='cursor-pointer hover:text-black'>Profile</p>
+              <Link to='/' className='cursor-pointer hover:text-black'>Profile</Link>
               <Link to='/orders' className='cursor-pointer hover:text-black'>
                 Orders
               </Link>
-              <p className='cursor-pointer hover:text-black'>Logout</p>
+              <Link to='/login' className='cursor-pointer hover:text-black'>Login</Link>
             </div>
           </div>
         </div>
@@ -70,7 +62,7 @@ const Navbar = () => {
         <Link to='/cart' className='relative'>
           <img src={assets3} alt='Cart' className='w-5 min-w-5' />
           <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[10px]'>
-            0
+            {getCartCount()}
           </p>
         </Link>
 
@@ -128,20 +120,6 @@ const Navbar = () => {
             className='py-2 pl-6 border-t border-gray-200'
           >
             CONTACT
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            to='/orders'
-            className='py-2 pl-6 border-t border-gray-200'
-          >
-            ORDERS
-          </NavLink>
-          <NavLink
-            onClick={() => setVisible(false)}
-            to='/login'
-            className='py-2 pl-6 border-t border-gray-200'
-          >
-            LOGIN
           </NavLink>
         </div>
       </div>

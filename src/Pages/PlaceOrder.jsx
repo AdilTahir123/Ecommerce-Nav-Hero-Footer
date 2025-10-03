@@ -1,9 +1,33 @@
-import React from 'react'
+import React from "react";
 
 const PlaceOrder = () => {
   return (
-    <div>PlaceOrder</div>
-  )
-}
+    <div className="p-8 bg-gray-50 min-h-screen flex justify-center items-center">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center">Payment</h2>
 
-export default PlaceOrder
+        {/* Dummy Payment Methods UI */}
+        <div className="space-y-4">
+          <button className="w-full border p-3 rounded-lg hover:bg-gray-100">
+            💳 Pay with Card
+          </button>
+          <button className="w-full border p-3 rounded-lg hover:bg-gray-100">
+            🏦 Pay with Bank Transfer
+          </button>
+          <button className="w-full border p-3 rounded-lg hover:bg-gray-100">
+            📱 Pay with UPI / Wallet
+          </button>
+        </div>
+
+        <button
+          onClick={() => alert("Redirecting to Stripe...")}
+          className="w-full bg-blue-600 text-white py-3 rounded-lg mt-6 hover:bg-blue-700 transition"
+        >
+          Place Order
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default PlaceOrder;
