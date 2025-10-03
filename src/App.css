@@ -9,6 +9,8 @@
 }
 *{
    font-family: 'Outfit', sans-serif;
+   background-color: white !important;
+    color: black !important;
 }
 .prata-regular {
   font-family: "Prata", serif;
