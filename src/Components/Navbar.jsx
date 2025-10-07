@@ -42,8 +42,9 @@ const Navbar = () => {
 
       {/* Right Side Icons */}
       <div className='flex items-center gap-6'>
+        <Link to="/collection">
         <img onClick={()=>setShowSearch(true)} src={assets1} alt='search' className='w-5 cursor-pointer' />
-
+        </Link>
         {/* Profile dropdown */}
         <div className='group relative'>
           <img className='w-5 cursor-pointer' src={assets2} alt='Profile' />

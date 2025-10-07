@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const PlaceOrder = () => {
   return (
@@ -18,13 +19,17 @@ const PlaceOrder = () => {
             📱 Pay with UPI / Wallet
           </button>
         </div>
-
+          <Link to="/" target="_blank">
         <button
-          onClick={() => alert("Redirecting to Stripe...")}
+          onClick={() => alert("Thanks For Purchasing")}
           className="w-full bg-blue-600 text-white py-3 rounded-lg mt-6 hover:bg-blue-700 transition"
         >
+      
           Place Order
+       
         </button>
+        </Link>
+        
       </div>
     </div>
   );

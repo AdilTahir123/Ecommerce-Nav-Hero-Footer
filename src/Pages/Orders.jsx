@@ -54,6 +54,7 @@ const Checkout = () => {
                 type="email"
                 className="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none"
                 placeholder="Enter your email"
+                required
               />
             </div>
             <div>
